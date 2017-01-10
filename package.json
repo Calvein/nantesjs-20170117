@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "eslint --ext .js .",
     "deploy": "npm run clean & npm run build && notify-send 'NantesJS talk' 'Build ready, git push now'",
     "start": "cross-env NODE_ENV=development node server.js"
   },
@@ -31,10 +31,9 @@
     "babel-preset-stage-0": "^6.3.13",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
-    "eslint": "^1.8.0",
-    "eslint-config-defaults": "^7.1.1",
-    "eslint-plugin-filenames": "^0.1.2",
-    "eslint-plugin-react": "^3.6.3",
+    "eslint": "^3.13.1",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-standard": "^2.0.1",
     "express": "^4.13.3",
     "file-loader": "^0.8.4",
     "html-loader": "^0.4.0",
