@@ -1,23 +1,22 @@
 import React from 'react'
-import { Slide, Heading, Link, Text } from 'spectacle'
+import { Slide, Heading, Image, Link, Text } from 'spectacle'
+import image from '../images'
 
 const One = () => (
-  <Slide bgColor="primary">
-    <Heading size={1} fit caps lineHeight={1} textColor="black">
-      Spectacle
+  <Slide>
+    <Heading fit caps textColor="secondary">
+      Introduction à D3
     </Heading>
-    <Heading size={1} fit caps>
-      A ReactJS Presentation Library
-    </Heading>
-    <Heading size={1} fit caps textColor="black">
-      Where You Can Write Your Decks In JSX
-    </Heading>
-    <Link href="https://github.com/FormidableLabs/spectacle">
-      <Text bold caps textColor="tertiary">View on Github</Text>
+    <Image
+      src={image.robocop}
+      margin="40px auto 60px"
+      height="293px"
+    />
+    <Link href="https://github.com/Calvein">
+      <Text bold textColor="link">
+        Par François Robichet (@Calvein)
+      </Text>
     </Link>
-    <Text textSize="1.5em" margin="20px 0px 0px" bold>
-      Hit Your Right Arrow To Begin!
-    </Text>
   </Slide>
 )
 
