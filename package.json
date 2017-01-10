@@ -1,13 +1,13 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "nantesjs-20170117",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "Nantesjs talks about D3 on the 17/01/2017 (using spectacle)",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run clean & npm run build && surge -p .",
+    "deploy": "npm run clean & npm run build && notify-send 'NantesJS talk' 'Build ready, git push now'",
     "start": "cross-env NODE_ENV=development node server.js"
   },
   "author": "",
@@ -45,7 +45,6 @@
     "react-transform-hmr": "^1.0.4",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
-    "surge": "latest",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.8",
     "webpack-dev-middleware": "^1.2.0",
