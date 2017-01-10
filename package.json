@@ -10,7 +10,7 @@
     "deploy": "npm run clean & npm run build && notify-send 'NantesJS talk' 'Build ready, git push now'",
     "start": "cross-env NODE_ENV=development node server.js"
   },
-  "author": "",
+  "author": "Calvein",
   "license": "MIT",
   "dependencies": {
     "normalize.css": "3.0.3",
