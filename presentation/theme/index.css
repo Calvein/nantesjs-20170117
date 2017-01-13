@@ -1,0 +1,10 @@
+/* Hacks ¯\_(ツ)_/¯ */
+
+.spectacle-presenter-notes ul {
+  margin: 0 !important;
+}
+
+.spectacle-presenter-notes li,
+.spectacle-presenter-notes span {
+    font-size: 1.5rem !important;
+}

@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import { Spectacle } from 'spectacle'
-import createTheme from 'spectacle/lib/themes/default'
+// Too much hard coded values
+import createTheme from './theme'
 import solarized from './solarized'
 import Slides from './slides'
 
 // Import theme
 require('normalize.css')
 require('spectacle/lib/themes/default/index.css')
+// Import theme
+require('./theme/index.css')
 
 // Solarized themes
 const darkTheme = createTheme({
