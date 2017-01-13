@@ -2,13 +2,13 @@ import preloader from 'spectacle/lib/utils/preloader'
 
 // Preload images
 const images = {
-  robocop: require('../assets/robocop.jpg'),
+  d3: require('../assets/d3.svg'),
 }
 preloader(images)
 
 // Replace /
-for (const name in images) {
-  images[name] = images[name].replace('/', '')
-}
+// for (const name in images) {
+//   images[name] = images[name].replace('/', '')
+// }
 
 export default images
