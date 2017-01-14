@@ -1,10 +1,28 @@
 /* Hacks ¯\_(ツ)_/¯ */
 
+
+/* Tweak on presenter mode */
 .spectacle-presenter-notes ul {
   margin: 0 !important;
 }
 
 .spectacle-presenter-notes li,
 .spectacle-presenter-notes span {
-    font-size: 1.5rem !important;
+  font-size: 1.5rem !important;
+}
+
+.spectacle-presenter .spectacle-content {
+  border: 1px solid red;
+}
+
+/* Stars COUNT */
+.flash {
+  animation: flash 1s;
+}
+
+@keyframes flash {
+  0% {
+    background: #b58900;
+    color: #002b36;
+  }
 }

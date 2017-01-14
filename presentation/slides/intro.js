@@ -2,6 +2,7 @@ import React from 'react'
 import {
   Slide,
   Heading,
+  Appear,
   Image,
   Link,
   Text,
@@ -15,9 +16,12 @@ import formatNotes from '../format-notes'
 
 // Notes are in MD
 const introNotes = `
-- Moi, j'ai travaillé à Toog pendant 2 ans
+- François Robichet, dev frontend
+- J'ai travaillé à Toog pendant 2 ans avec Thomas et Ronan
 - Je suis parti en Australie pendant près de 4 ans ou j'ai fait beaucoup de D3
+dans un studio de dataviz qui s'appele Small Multiples
 - Je suis revenu avec Tamara qui est aussi frontend
+- La preso est en React avec Spectacle sur GitHub
 `
 const intro = (
   <Slide
@@ -46,9 +50,13 @@ const intro = (
 )
 
 const d3Notes = `
-- lien vers le blog/liste de lien de Mike
+- Documents conduit par les données, comme content-first les données/contenus
+sont rois
+- devise de D3 sur Github, c'est les "Documents"
+- Créé par Mike Bostock pour son doctorat
+- lien vers le blog/liste d'article de Mike, anciens post (pas sur Medium)
+e.g: celui des algos avec randomisation (La Nuit étoilée) et sorting
 - Mike a travaillé au New York Time et depuis près de 2 ans 100% sur D3
-- devise de D3
 `
 const d3 = (
   <Slide
@@ -59,25 +67,41 @@ const d3 = (
       Qu'est-ce D3 ?
     </Heading>
     <List>
-      <ListItem>
-        Le 4ème repo sur Github avec près de 60,000 stars
-      </ListItem>
-      <ListItem>
-        Créé par
-        <Link href="https://bost.ocks.org/mike/">
-          {' '}Mike Bostock{' '}
-        </Link>
-        à Standford
-      </ListItem>
-      <ListItem>
-        "Bring data to life with SVG, Canvas and HTML"
-      </ListItem>
+      <Appear>
+        <ListItem>
+          <b>D</b>ata-<b>D</b>riven <b>D</b>ocuments
+        </ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>
+          "Bring data to life with SVG, Canvas and HTML"
+        </ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>
+          Le 4ème repo sur Github avec{' '}
+          <b id="stargazers-count">près de 60,000</b>
+          {' '}stars
+        </ListItem>
+      </Appear>
+      <Appear>
+        <ListItem>
+          Créé par
+          <Link href="https://bost.ocks.org/mike/">
+            {' '}Mike Bostock{' '}
+          </Link>
+          à Standford
+        </ListItem>
+      </Appear>
     </List>
   </Slide>
 )
 
 const myExamplesNotes = `
-- Mes exemples
+- Globe choroplèthe
+- Force-directed graph collaboration entre pays
+- Bar
+- Random canvas
 `
 const myExamples = (
   <Slide
@@ -120,8 +144,10 @@ const myExamples = (
 )
 
 const d3ExamplesNotes = `
-- Les exemples de Mike
-- Restriction CORS donc pas d'iframe :(
+- Les exemples de Mike, restriction CORS donc pas d'iframe :(
+- exemples sur blocks, gists
+- si vous remontez, vous pouvez voir ses essaies sur cartes ou la
+visualisation d'algos
 `
 const d3Examples = (
   <Slide

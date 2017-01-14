@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { findDOMNode } from 'react-dom'
 import { Spectacle } from 'spectacle'
 // Too much hard coded values
 import createTheme from './theme'
 import solarized from './solarized'
+import humanize from 'humanize-number'
 import Slides from './slides'
 
 // Import theme
@@ -71,6 +73,30 @@ class Presentation extends Component {
         })
       }
     })
+
+    // Check every 3s the number of stargazers of d3 and update an element
+    // It's not passed through the props because the slides have to be an array
+    // And they can't be overridden
+    const getD3Stargazers = () => {
+      // Get the element, if it exists
+      const el = findDOMNode(this).querySelector('#stargazers-count')
+      if (!el) return
+
+      fetch('https://api.github.com/repos/d3/d3')
+        .then((res) => res.json())
+        .then((data) => {
+          const total = humanize(data.stargazers_count)
+          // Flash the element if the number changes
+          if (el.textContent !== total) {
+            el.classList.remove('flash')
+            // Trigger reflow
+            void el.offsetWidth
+            el.classList.add('flash')
+          }
+          el.textContent = total
+        })
+    }
+    setInterval(getD3Stargazers, 5e3)
   }
 }
 
