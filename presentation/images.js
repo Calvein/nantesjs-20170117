@@ -8,6 +8,14 @@ const images = {
   project3: require('../assets/nature.png'),
   project4: require('../assets/powerof1.gif'),
   blocks: require('../assets/blocks.png'),
+  roboderp: require('../assets/roboderp.gif'),
+  robokay: require('../assets/robokay.gif'),
+  diagonal: require('../assets/diagonal.png'),
+  treemap: require('../assets/treemap.png'),
+  partition: require('../assets/partition.png'),
+  bubble: require('../assets/bubble.png'),
+  pack: require('../assets/pack.png'),
+  cluster: require('../assets/cluster.png'),
 }
 preloader(images)
 

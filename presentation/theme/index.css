@@ -1,5 +1,7 @@
 /* Hacks ¯\_(ツ)_/¯ */
-
+ul {
+  list-style-position: outside !important;
+}
 
 /* Tweak on presenter mode */
 .spectacle-presenter-notes ul {

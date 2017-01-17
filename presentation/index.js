@@ -85,7 +85,7 @@ class Presentation extends Component {
       fetch('https://api.github.com/repos/d3/d3')
         .then((res) => res.json())
         .then((data) => {
-          const total = humanize(data.stargazers_count)
+          const total = humanize(data.stargazers_count, { delimiter: '' })
           // Flash the element if the number changes
           if (el.textContent !== total) {
             el.classList.remove('flash')

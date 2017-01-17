@@ -2,7 +2,6 @@ import React from 'react'
 import {
   Slide,
   Heading,
-  Appear,
   Image,
   Link,
   Text,
@@ -64,35 +63,25 @@ const d3 = (
     notes={formatNotes(d3Notes)}
   >
     <Heading size={2}>
-      Qu'est-ce D3 ?
+      D3 c'est cool c'est quoi ?
     </Heading>
     <List>
-      <Appear>
-        <ListItem>
-          <b>D</b>ata-<b>D</b>riven <b>D</b>ocuments
-        </ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>
-          "Bring data to life with SVG, Canvas and HTML"
-        </ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>
-          Le 4ème repo sur Github avec{' '}
-          <b id="stargazers-count">près de 60,000</b>
-          {' '}stars
-        </ListItem>
-      </Appear>
-      <Appear>
-        <ListItem>
-          Créé par
-          <Link href="https://bost.ocks.org/mike/">
-            {' '}Mike Bostock{' '}
-          </Link>
-          à Standford
-        </ListItem>
-      </Appear>
+      <ListItem>
+        <b>D</b>ata-<b>D</b>riven <b>D</b>ocuments
+      </ListItem>
+      <ListItem>
+        "Bring data to life with SVG, Canvas and HTML"
+      </ListItem>
+      <ListItem>
+        Le 4ème repo sur Github avec <b id="stargazers-count">...</b> stars
+      </ListItem>
+      <ListItem>
+        Créé par
+        <Link href="https://bost.ocks.org/mike/">
+          {' '}Mike Bostock{' '}
+        </Link>
+        à Standford
+      </ListItem>
     </List>
   </Slide>
 )
@@ -100,7 +89,7 @@ const d3 = (
 const myExamplesNotes = `
 - Globe choroplèthe
 - Force-directed graph collaboration entre pays
-- Bar
+- Bar/Histograme
 - Random canvas
 `
 const myExamples = (
@@ -110,7 +99,7 @@ const myExamples = (
   >
     <Heading
       size={2}
-      margin='-20px 0 20px'
+      margin="-20px 0 20px"
     >
       Exemples
     </Heading>
@@ -151,13 +140,10 @@ visualisation d'algos
 `
 const d3Examples = (
   <Slide
-    key="1.3"
+    key="1.4"
     notes={formatNotes(d3ExamplesNotes)}
   >
-    <Heading
-      size={2}
-      margin='-20px 0 20px'
-    >
+    <Heading size={2}>
       Exemples
     </Heading>
     <Image
